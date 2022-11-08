@@ -6,9 +6,16 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: black;
+}
+
 img {
     max-width: 100%;
+}
 
+.background-white {
+    background-color: white;
 }
 
 a {
@@ -17,7 +24,5 @@ a {
 }
 
 .borderlist {
-    list-style-position: inside;
-    border-bottom: 5px solid lighten($primary-color, 30%);
-
+    border-bottom: 3px solid lighten($primary-color, 30%);
 }

@@ -10,9 +10,11 @@ export default {
 </script>
 
 <template>
+
   <AppHeader />
 
   <AppFooter />
+
 </template>
 
 <style lang="scss">

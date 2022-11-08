@@ -60,18 +60,20 @@ export default {
 </script>
 
 <template>
-    <header class="header">
-        <div class="logo">
-            <img src="../assets/vue-dc-comics-1/img/dc-logo.png" alt="Logo dc">
-        </div>
-        <nav class="header-navigation">
-            <ul>
-                <li :class="{ 'borderlist': link.active }" v-for="(link, index) in links" :key="index">
-                    <a :class="{ 'active': link.active }" :href="link.href">{{ link.title }}</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="background-white">
+        <header class="header">
+            <div class="logo">
+                <img src="../assets/vue-dc-comics-1/img/dc-logo.png" alt="Logo dc">
+            </div>
+            <nav class="header-navigation">
+                <ul>
+                    <li :class="{ 'borderlist': link.active }" v-for="(link, index) in links" :key="index">
+                        <a :class="{ 'active': link.active }" :href="link.href">{{ link.title }}</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -79,14 +81,22 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .header {
+    @include flex-center("horizontal");
+    justify-content: space-between;
+    margin: 40px auto;
+    width: $container-size;
+    height: 100px;
 
 
     .logo {
-        @include flex-center("horizontal");
+        @include flex-center("both");
+
+        img {
+            width: 80px;
+        }
     }
 
     &-navigation {
-        height: 200px;
 
         ul {
             list-style: none;
@@ -95,8 +105,10 @@ export default {
 
 
             li {
+                @include flex-center("vertical");
                 margin: 0px 1rem;
                 height: 100%;
+                padding-bottom: 1rem;
 
                 a {
 
