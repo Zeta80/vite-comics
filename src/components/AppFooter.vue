@@ -24,6 +24,46 @@ export default {
                     title: "DC POWER VISA",
                     img: "buy-dc-power-visa.svg",
                 },
+            ],
+            links: [
+                {
+                    title: "DC COMICS",
+                    link: [
+                        "lorem",
+                        "lorem",
+                        "lorem"
+                    ],
+                },
+                {
+
+                    title: "SHOP",
+                    link: [
+                        "lorem",
+                        "lorem",
+                        "lorem"
+                    ]
+                },
+                {
+
+
+
+                    title: "DC",
+                    link: [
+                        "lorem",
+                        "lorem",
+                        "lorem"
+                    ],
+                },
+                {
+                    title: "SITES",
+                    link: [
+                        "lorem",
+                        "lorem",
+                        "lorem"
+                    ],
+
+                }
+
             ]
 
         }
@@ -51,7 +91,23 @@ export default {
         </section>
 
         <section class="footer-links">
+            <div class="links-wrapper">
+                <div class="contact-links">
+                    <div v-for="(link, index) in links" :key="index">
+                        <h2>{{ link.title }}</h2>
+                        <ul>
+                            <li v-for="(item, index) in links" :key="index">
+                                <a href="">{{ item.link[index] }}</a>
+                            </li>
 
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="links-img">
+                    <img src="../assets/vue-dc-comics-1/img/dc-logo-bg.png" alt="">
+                </div>
+            </div>
         </section>
 
         <section class="footer-social">
@@ -68,8 +124,7 @@ export default {
 
 .blu-row {
     background-color: #0282f9;
-    // DEBUG
-    height: 150px;
+
 
     .stack-wrapper {
         width: $container-size;
@@ -81,6 +136,22 @@ export default {
 
 .footer-links {
     background-image: url(../assets/vue-dc-comics-1/img/footer-bg.jpg);
+
+    .links-wrapper {
+        @include flex-direction("row");
+        width: $container-size;
+        margin: 0 auto;
+
+
+        .links-img {
+
+            img {
+                width: 400px;
+                overflow: hidden;
+            }
+        }
+    }
+
     // DEBUG
     height: 300px;
 }
