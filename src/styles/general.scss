@@ -1,0 +1,23 @@
+@use "../styles/partials/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.borderlist {
+    list-style-position: inside;
+    border-bottom: 5px solid lighten($primary-color, 30%);
+
+}
