@@ -150,7 +150,7 @@ export default {
                     <span><i class="fa-brands fa-facebook-f"></i></span>
                     <span><i class="fa-brands fa-twitter"></i></span>
                     <span><i class="fa-brands fa-youtube"></i></span>
-                    <span><i class="fa-brands fa-pintarest"></i></span>
+                    <span><i class="fa-brands fa-pinterest-p"></i></span>
                     <span><i class="fa-solid fa-location-dot"></i></span>
                 </div>
             </div>
@@ -234,19 +234,18 @@ export default {
     }
 
     .social-icon {
+        @include flex-direction("row");
+        align-items: center;
 
         span {
             display: inline-block;
             background-color: #959595;
             width: 30px;
             height: 30px;
-            line-height: 20px;
+            line-height: 30px;
             border-radius: 30px;
-
-            i {
-                @include flex-center("both")
-            }
-
+            vertical-align: middle;
+            text-align: center;
         }
     }
 
