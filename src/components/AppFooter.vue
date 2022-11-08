@@ -173,6 +173,7 @@ export default {
     .links-wrapper {
         @include flex-direction("row");
         width: $container-size;
+        max-height: 300px;
         margin: 0 auto;
         align-items: center;
 
@@ -205,7 +206,8 @@ export default {
         .links-img {
 
             img {
-                width: 400px;
+                width: 600px;
+                opacity: 0.7;
             }
         }
     }
