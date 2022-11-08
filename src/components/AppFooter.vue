@@ -143,7 +143,17 @@ export default {
         </section>
 
         <section class="footer-social">
-
+            <div class="wrapper-social">
+                <button>SIGN-UP NOW!</button>
+                <div class="social-icon">
+                    <h3>FOLLOW US</h3>
+                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                    <span><i class="fa-brands fa-youtube"></i></span>
+                    <span><i class="fa-brands fa-pintarest"></i></span>
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                </div>
+            </div>
         </section>
     </div>
 </template>
@@ -215,7 +225,30 @@ export default {
 
 .footer-social {
     background-color: #303030;
-    // DEBUG
-    height: 100px;
+    min-height: 100px;
+
+    .wrapper-social {
+        width: $container-size;
+        margin: 0 auto;
+        @include flex-direction("row");
+    }
+
+    .social-icon {
+
+        span {
+            display: inline-block;
+            background-color: #959595;
+            width: 30px;
+            height: 30px;
+            line-height: 20px;
+            border-radius: 30px;
+
+            i {
+                @include flex-center("both")
+            }
+
+        }
+    }
+
 }
 </style>
