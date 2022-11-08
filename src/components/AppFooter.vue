@@ -25,46 +25,6 @@ export default {
                     img: "buy-dc-power-visa.svg",
                 },
             ],
-            links: [
-                {
-                    title: "DC COMICS",
-                    link: [
-                        "lorem",
-                        "lorem",
-                        "lorem"
-                    ],
-                },
-                {
-
-                    title: "SHOP",
-                    link: [
-                        "lorem",
-                        "lorem",
-                        "lorem"
-                    ]
-                },
-                {
-
-
-
-                    title: "DC",
-                    link: [
-                        "lorem",
-                        "lorem",
-                        "lorem"
-                    ],
-                },
-                {
-                    title: "SITES",
-                    link: [
-                        "lorem",
-                        "lorem",
-                        "lorem"
-                    ],
-
-                }
-
-            ]
 
         }
 
@@ -93,13 +53,85 @@ export default {
         <section class="footer-links">
             <div class="links-wrapper">
                 <div class="contact-links">
-                    <div v-for="(link, index) in links" :key="index">
-                        <h2>{{ link.title }}</h2>
+                    <div>
+                        <h2>DC COMICS </h2>
                         <ul>
-                            <li v-for="(item, index) in links" :key="index">
-                                <a href="">{{ item.link[index] }}</a>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                        </ul>
+
+                        <h2>SHOP </h2>
+                        <ul>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
                             </li>
 
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>DC </h2>
+                        <ul>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>SITES</h2>
+                        <ul>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
+                            <li>
+                                <a href=""> lorem </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -136,24 +168,47 @@ export default {
 
 .footer-links {
     background-image: url(../assets/vue-dc-comics-1/img/footer-bg.jpg);
+    overflow: hidden;
 
     .links-wrapper {
         @include flex-direction("row");
         width: $container-size;
         margin: 0 auto;
+        align-items: center;
 
+        .contact-links {
+            @include flex-direction("row");
+            @include flex-center("horizontal");
+
+            div {
+                margin: 0 1rem;
+            }
+
+            ul {
+                margin: 1rem 0;
+            }
+
+            h2 {
+                color: white;
+            }
+
+            a {
+                color: #959595;
+
+                &:hover {
+                    color: white;
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
 
         .links-img {
 
             img {
                 width: 400px;
-                overflow: hidden;
             }
         }
     }
-
-    // DEBUG
-    height: 300px;
 }
 
 .footer-social {
