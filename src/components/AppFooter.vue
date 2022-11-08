@@ -10,7 +10,7 @@ export default {
                 },
                 {
                     title: "DC MERCHAINDISE",
-                    img: "buy-comics-merchaindise.png",
+                    img: "buy-comics-merchandise.png",
                 },
                 {
                     title: "COMIC SHOP LOCATOR",
@@ -41,9 +41,12 @@ export default {
     <div class="footer-wrapper">
 
         <section class="blu-row">
-            <div v-for="(stack, index) in stacks" class="stacks" :key="index">
-                <img :src="getImagePath(index)" alt="">
-                <p>{{ stack.title }}</p>
+            <div class="stack-wrapper">
+
+                <div v-for="(stack, index) in stacks" class="stacks" :key="index">
+                    <img :src="getImagePath(index)" alt="">
+                    <p>{{ stack.title }}</p>
+                </div>
             </div>
         </section>
 
@@ -63,12 +66,17 @@ export default {
 @use "../styles/partials/variables" as *;
 
 
-
-
 .blu-row {
     background-color: #0282f9;
     // DEBUG
     height: 150px;
+
+    .stack-wrapper {
+        width: $container-size;
+        margin: 0 auto;
+        @include flex-direction("row");
+
+    }
 }
 
 .footer-links {
