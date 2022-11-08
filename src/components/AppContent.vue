@@ -21,7 +21,7 @@ export default {
 @use "../styles/partials/variables" as *;
 
 div {
-    height: 100px;
+    height: 500px;
     width: $container-size;
     margin: 0 auto;
 
