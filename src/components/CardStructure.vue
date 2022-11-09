@@ -24,13 +24,15 @@ export default {
 .card {
     width: calc(100% / 6 - 10px);
     margin: 5px;
+    text-align: start;
 
     .img-cont {
         width: 100%;
+        height: 167px;
+        overflow: hidden;
     }
 
     h4 {
-        text-align: center;
         padding: .5rem;
     }
 
