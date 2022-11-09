@@ -144,7 +144,9 @@ export default {
 
         <section class="footer-social">
             <div class="wrapper-social">
-                <button>SIGN-UP NOW!</button>
+                <div class="button">
+                    <button>SIGN-UP NOW!</button>
+                </div>
                 <div class="social-icon">
                     <h3>FOLLOW US</h3>
                     <span><i class="fa-brands fa-facebook-f"></i></span>
@@ -171,8 +173,20 @@ export default {
     .stack-wrapper {
         width: $container-size;
         margin: 0 auto;
+        padding: 2rem 0;
         @include flex-direction("row");
 
+
+        .stacks {
+            @include flex-direction("row");
+            @include flex-center("vertical");
+            color: white;
+
+            img {
+                width: 60px;
+                margin-right: 10px;
+            }
+        }
     }
 }
 
@@ -225,29 +239,59 @@ export default {
 
 .footer-social {
     background-color: #303030;
-    min-height: 100px;
+    min-height: 70px;
+    @include flex-center("vertical");
 
     .wrapper-social {
         width: $container-size;
         margin: 0 auto;
         @include flex-direction("row");
-    }
 
-    .social-icon {
-        @include flex-direction("row");
-        align-items: center;
+        .button {
+            button {
+                background-color: #303030;
+                border-color: #0282f9;
+                color: white;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
 
-        span {
-            display: inline-block;
-            background-color: #959595;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            border-radius: 30px;
-            vertical-align: middle;
-            text-align: center;
+                &:hover {
+                    background-color: #0282f9;
+                    color: black;
+                }
+            }
+        }
+
+        .social-icon {
+            @include flex-direction("row");
+            align-items: center;
+
+            h3 {
+                color: #0282f9;
+                font-size: 15px;
+            }
+
+            span {
+                display: inline-block;
+                margin-left: 0.5em;
+                background-color: #959595;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                vertical-align: middle;
+                border-radius: 30px;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #0282f9;
+                    color: white;
+
+                }
+            }
         }
     }
+
 
 }
 </style>

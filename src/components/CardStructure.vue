@@ -6,9 +6,8 @@ export default {
         thumb: String,
         series: String
     },
-
-
 }
+
 </script>
 
 <template>

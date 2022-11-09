@@ -83,7 +83,7 @@ export default {
 .header {
     @include flex-center("horizontal");
     justify-content: space-between;
-    margin: 40px auto;
+    margin: 0 auto;
     width: $container-size;
     height: 100px;
 

@@ -156,6 +156,13 @@ export default {
                 background-color: #0282f9;
                 border: none;
                 color: white;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #badeff;
+                    color: black;
+                }
+
             }
         }
 
