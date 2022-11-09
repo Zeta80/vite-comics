@@ -95,6 +95,7 @@ export default {
 
         <div class="container-cards">
             <div class="wrapper-cards">
+                <h2>CURRENT SERIES</h2>
                 <CardStructure v-for="(card, index) in cards" :key="index" :series="card.series" :thumb="card.thumb" />
             </div>
             <div class="button">
@@ -119,6 +120,7 @@ export default {
     .banner {
         height: 400px;
         overflow: hidden;
+
     }
 
 
@@ -133,6 +135,16 @@ export default {
             display: flex;
             flex-wrap: wrap;
             padding: 3rem 0;
+            position: relative;
+
+            h2 {
+                position: absolute;
+                top: -20px;
+                left: 0;
+                background-color: #0282f9;
+                color: white;
+                padding: 0.5rem 1rem;
+            }
         }
 
         .button {
